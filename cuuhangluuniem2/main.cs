@@ -16,6 +16,7 @@ namespace cuuhangluuniem2
         SqlConnection cn = new SqlConnection();
         SqlCommand cm = new SqlCommand();
         DBConnect dBConnect = new DBConnect();
+        public string _pass;
         public Form1()
         {
             InitializeComponent();
@@ -79,6 +80,7 @@ namespace cuuhangluuniem2
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
+            //display name child form
             label_Title.Text = childForm.Text;
             panel_Main.Controls.Add(childForm);
             panel_Main.Tag= childForm;
@@ -88,7 +90,8 @@ namespace cuuhangluuniem2
 
         private void btDashboard_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new DashBoard());
+            hide_submenu() ;
         }
 
         private void btProduct_Click(object sender, EventArgs e)
@@ -98,11 +101,13 @@ namespace cuuhangluuniem2
 
         private void btListProduct_Click(object sender, EventArgs e)
         {
+            openChildForm(new Product());
             hide_submenu();//used to hide sub_menu
         }
 
         private void btCategory_Product_Click(object sender, EventArgs e)
         {
+            openChildForm(new Category());
             hide_submenu();
         }
 
@@ -119,17 +124,20 @@ namespace cuuhangluuniem2
 
         private void btEntry_Click(object sender, EventArgs e)
         {
+            openChildForm(new stock());
             hide_submenu();
         }
 
         private void btAdjust_Click(object sender, EventArgs e)
         {
+            openChildForm(new Adjustment(this));
             hide_submenu();
         }
 
         private void btSupplier_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Supplier());
+            hide_submenu();
         }
 
         private void btRecord_Click(object sender, EventArgs e)
@@ -139,11 +147,14 @@ namespace cuuhangluuniem2
 
         private void btHistory_Click(object sender, EventArgs e)
         {
+            DailySale daily = new DailySale();
+            daily.ShowDialog();
             hide_submenu();
         }
 
         private void bt_Product_of_sale_Click(object sender, EventArgs e)
         {
+            openChildForm(new dtFromStockIn());
             hide_submenu();
         }
 
@@ -154,22 +165,53 @@ namespace cuuhangluuniem2
 
         private void bt_User_Click(object sender, EventArgs e)
         {
-            hide_submenu();
-        }
-
-        private void bt_Store_Click(object sender, EventArgs e)
-        {
+            openChildForm(new UserAccount(this));
             hide_submenu();
         }
 
         private void bt_Logout_Click(object sender, EventArgs e)
         {
             hide_submenu();
+            if (MessageBox.Show("Bạn muốn đăng xuất tài khoản", "Đăng Xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+            }
         }
 
         private void panel_Main_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn thoát phần mềm?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Check if the user is closing the form using the Alt+F4 key combination
+            if (e.CloseReason == CloseReason.UserClosing && (Control.ModifierKeys & Keys.Alt) == Keys.Alt)
+            {
+                // Perform any necessary cleanup or save operations
+                // ...
+
+                // Exit the application
+                if (MessageBox.Show("Bạn muốn thoát phần mềm?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+            }
+        }
+
+        private void btStore_Click(object sender, EventArgs e)
+        {
+            hide_submenu();
         }
     }
 }

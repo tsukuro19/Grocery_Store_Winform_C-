@@ -73,5 +73,6 @@ namespace cuuhangluuniem2
             Brandmodule moduleForm = new Brandmodule(this);
             moduleForm.ShowDialog();
         }
+
     }
 }

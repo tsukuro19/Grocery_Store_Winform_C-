@@ -67,7 +67,7 @@ namespace cuuhangluuniem2
                 cm.Parameters.AddWithValue("@hangsanxuat", txtBrand.Text);
                 cm.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("Bản ghi đã được cập nhật", "Thông Báo");
+                MessageBox.Show("Hãng sản xuất đã được cập nhật", "Thông Báo");
                 Clear();
                 this.Dispose();//to close this form after update data
             }
@@ -75,7 +75,10 @@ namespace cuuhangluuniem2
 
         private void btCancel_Click(object sender, EventArgs e)
         {
-            Clear();
+            if (MessageBox.Show("Bạn có chắc muốn hủy không?", "Cảnh Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.No)
+            {
+                this.Dispose();
+            }
         }
 
         public void Clear()

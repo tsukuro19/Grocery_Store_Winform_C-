@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBrand = new System.Windows.Forms.TextBox();
             this.btSave = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btCancel = new System.Windows.Forms.Button();
             this.btUpdate = new System.Windows.Forms.Button();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.lbID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
@@ -43,7 +43,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Orange;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(160)))));
             this.panel1.Controls.Add(this.picClose);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -52,13 +52,25 @@
             this.panel1.Size = new System.Drawing.Size(839, 70);
             this.panel1.TabIndex = 0;
             // 
+            // picClose
+            // 
+            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picClose.Image = global::cuuhangluuniem2.Properties.Resources.button_57357751;
+            this.picClose.Location = new System.Drawing.Point(794, 8);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(33, 32);
+            this.picClose.TabIndex = 1;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(29, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 22);
+            this.label1.Size = new System.Drawing.Size(227, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thông Tin Hãng Sản Xuất";
             // 
@@ -71,9 +83,11 @@
             // 
             // btSave
             // 
-            this.btSave.BackColor = System.Drawing.Color.Orange;
+            this.btSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(170)))));
             this.btSave.FlatAppearance.BorderSize = 0;
             this.btSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSave.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSave.ForeColor = System.Drawing.Color.White;
             this.btSave.Location = new System.Drawing.Point(476, 186);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(113, 39);
@@ -95,9 +109,10 @@
             // btCancel
             // 
             this.btCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btCancel.BackColor = System.Drawing.Color.Gray;
+            this.btCancel.BackColor = System.Drawing.Color.Gainsboro;
             this.btCancel.FlatAppearance.BorderSize = 0;
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCancel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCancel.Location = new System.Drawing.Point(714, 186);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(113, 39);
@@ -109,9 +124,11 @@
             // btUpdate
             // 
             this.btUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btUpdate.BackColor = System.Drawing.Color.BurlyWood;
+            this.btUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btUpdate.FlatAppearance.BorderSize = 0;
             this.btUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btUpdate.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdate.ForeColor = System.Drawing.Color.White;
             this.btUpdate.Location = new System.Drawing.Point(595, 186);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(113, 39);
@@ -119,17 +136,6 @@
             this.btUpdate.Text = "Cập Nhật";
             this.btUpdate.UseVisualStyleBackColor = false;
             this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
-            // 
-            // picClose
-            // 
-            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picClose.Image = global::cuuhangluuniem2.Properties.Resources.button_57357751;
-            this.picClose.Location = new System.Drawing.Point(794, 8);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(33, 32);
-            this.picClose.TabIndex = 1;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // lbID
             // 
@@ -154,7 +160,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Brandmodule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Brandmodule";

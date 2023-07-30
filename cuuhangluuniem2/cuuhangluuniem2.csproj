@@ -12,6 +12,25 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\App Project\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <PublisherName>thien</PublisherName>
+    <SuiteName>nguyen</SuiteName>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +51,46 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A7A429C1361807F5AC11E88614DAE58CEB1F6629</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>cuuhangluuniem2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +104,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustment.Designer.cs">
+      <DependentUpon>Adjustment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Brand.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,23 +122,297 @@
     <Compile Include="Brandmodule.Designer.cs">
       <DependentUpon>Brandmodule.cs</DependentUpon>
     </Compile>
+    <Compile Include="CancelOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelOrder.Designer.cs">
+      <DependentUpon>CancelOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier.Designer.cs">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categarymodule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categarymodule.Designer.cs">
+      <DependentUpon>Categarymodule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Daily Sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daily Sale.Designer.cs">
+      <DependentUpon>Daily Sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="Discount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discount.Designer.cs">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookupProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookupProduct.Designer.cs">
+      <DependentUpon>LookupProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
+    <Compile Include="POSReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POSReport.Designer.cs">
+      <DependentUpon>POSReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintCancel.Designer.cs">
+      <DependentUpon>PrintCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintInventoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintInventoryList.Designer.cs">
+      <DependentUpon>PrintInventoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintSoldItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintSoldItems.Designer.cs">
+      <DependentUpon>PrintSoldItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="printStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printStockIn.Designer.cs">
+      <DependentUpon>printStockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTopSelling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintTopSelling.Designer.cs">
+      <DependentUpon>PrintTopSelling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductModule.Designer.cs">
+      <DependentUpon>ProductModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductStockIn.Designer.cs">
+      <DependentUpon>ProductStockIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record.Designer.cs">
+      <DependentUpon>Record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Store.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store.Designer.cs">
+      <DependentUpon>Store.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserProperties.Designer.cs">
+      <DependentUpon>UserProperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Qty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qty.Designer.cs">
+      <DependentUpon>Qty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settle.Designer.cs">
+      <DependentUpon>Settle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock.Designer.cs">
+      <DependentUpon>stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuplierModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuplierModule.Designer.cs">
+      <DependentUpon>SuplierModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccount.Designer.cs">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Void.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Void.Designer.cs">
+      <DependentUpon>Void.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Adjustment.resx">
+      <DependentUpon>Adjustment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Brand.resx">
       <DependentUpon>Brand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Brandmodule.resx">
       <DependentUpon>Brandmodule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CancelOrder.resx">
+      <DependentUpon>CancelOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier.resx">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categarymodule.resx">
+      <DependentUpon>Categarymodule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daily Sale.resx">
+      <DependentUpon>Daily Sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discount.resx">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupProduct.resx">
+      <DependentUpon>LookupProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POSReport.resx">
+      <DependentUpon>POSReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintCancel.resx">
+      <DependentUpon>PrintCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintInventoryList.resx">
+      <DependentUpon>PrintInventoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintSoldItems.resx">
+      <DependentUpon>PrintSoldItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printStockIn.resx">
+      <DependentUpon>printStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTopSelling.resx">
+      <DependentUpon>PrintTopSelling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductModule.resx">
+      <DependentUpon>ProductModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductStockIn.resx">
+      <DependentUpon>ProductStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record.resx">
+      <DependentUpon>Record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpReceipt.rdlc" />
+    <EmbeddedResource Include="rptCancel.rdlc" />
+    <EmbeddedResource Include="rptInventoryList.rdlc" />
+    <EmbeddedResource Include="rptSoldItems.rdlc" />
+    <EmbeddedResource Include="rptSoldReport.rdlc" />
+    <EmbeddedResource Include="rptStockIn.rdlc" />
+    <EmbeddedResource Include="Store.resx">
+      <DependentUpon>Store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopSelling.rdlc" />
+    <EmbeddedResource Include="UserProperties.resx">
+      <DependentUpon>UserProperties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,6 +424,43 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Qty.resx">
+      <DependentUpon>Qty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settle.resx">
+      <DependentUpon>Settle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock.resx">
+      <DependentUpon>stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuplierModule.resx">
+      <DependentUpon>SuplierModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAccount.resx">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Void.resx">
+      <DependentUpon>Void.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="cuuhangluuniem2_TemporaryKey.pfx" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,7 +475,60 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DBPoS.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DBPoS_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="image\user-image-with-black-background.png" />
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\user_38018541.png" />
+    <None Include="Resources\check-mark2.png" />
+    <None Include="Resources\coupon %281%29.png" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\in-stock.png" />
+    <None Include="Resources\important.png" />
+    <None Include="Resources\mark.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\shield.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\button_57357753.png" />
+    <None Include="Resources\check-mark1.png" />
+    <None Include="Resources\button_57357752.png" />
+    <None Include="Resources\padlock.png" />
+    <None Include="Resources\contact.png" />
+    <None Include="Resources\shop %282%29.png" />
+    <None Include="Resources\shop %281%29.png" />
+    <None Include="Resources\shop.png" />
+    <None Include="Resources\check-mark.png" />
+    <None Include="Resources\recycle-bin1.png" />
+    <None Include="Resources\minus1.png" />
+    <None Include="Resources\order.png" />
+    <None Include="Resources\recycle-bin.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\plus_753317.png" />
+    <None Include="Resources\user_3801854.png" />
+    <None Include="Resources\cash-counter_2473877 %281%29.png" />
+    <None Include="Resources\cash-counter_2473877.png" />
+    <None Include="Resources\add-button_8344983.png" />
+    <None Include="Resources\profile_3031093 %281%29.png" />
+    <None Include="Resources\profile_3031093.png" />
+    <None Include="Resources\box_3848991.png" />
+    <None Include="Resources\brand-image_5110846.png" />
+    <None Include="Resources\options-lines_82122.png" />
     <None Include="Resources\bin_484611.png" />
     <None Include="Resources\edit_420140.png" />
     <None Include="Resources\button_57357751.png" />
@@ -109,6 +537,18 @@
     <None Include="Resources\brand-image_5486254.png" />
     <None Include="Resources\icon_brand1.png" />
     <None Include="Resources\icon_brand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
