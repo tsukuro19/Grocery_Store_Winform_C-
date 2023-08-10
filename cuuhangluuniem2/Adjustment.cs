@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -56,7 +57,7 @@ namespace cuuhangluuniem2
         {
             string colname = dtgvAdjustment.Columns[e.ColumnIndex].Name;
             lbPcode.Text = dtgvAdjustment.Rows[e.RowIndex].Cells[1].Value.ToString();
-            lbProduct_Name.Text = dtgvAdjustment.Rows[e.RowIndex].Cells[3].Value.ToString() + " " + dtgvAdjustment.Rows[e.RowIndex].Cells[4].Value.ToString() + " " + dtgvAdjustment.Rows[e.RowIndex].Cells[5].Value.ToString();
+            lbProduct_Name.Text = dtgvAdjustment.Rows[e.RowIndex].Cells[3].Value.ToString() ;
             _qty = int.Parse(dtgvAdjustment.Rows[e.RowIndex].Cells[7].Value.ToString() + " ");
             btSave.Enabled = true;
         }
@@ -117,7 +118,8 @@ namespace cuuhangluuniem2
                 }
                 else if(cbAction.Text== "Thêm vào hàng tồn kho")
                 {
-                    dBConnect.ExecuteQuerry("update tbProduct1 set qty = (qty +" + int.Parse(txtQty.Text) + ") where pcode like '" + lbPcode.Text + "'");
+                    dBConnect.ExecuteQuerry("update tbProduct1 set qty = (qty -" + int.Parse(txtQty.Text) + ") where pcode like '" + lbPcode.Text + "'");
+                    dBConnect.ExecuteQuerry("update tbInventory set qty = (qty +" + int.Parse(txtQty.Text) + ") where pcode like '" + lbPcode.Text + "'");
                 }
 
                 dBConnect.ExecuteQuerry("insert into tbAdjustment(referenceno, pcode, qty, action, remark, sdate, [user]) values ('"+lbRefno.Text+"','"+lbPcode.Text+"','"+int.Parse(txtQty.Text)+"','"+cbAction.Text+"','"+txtRemark.Text+"','"+DateTime.Now.ToString("yyyyMMdd")+"','"+lbUsername+"')");

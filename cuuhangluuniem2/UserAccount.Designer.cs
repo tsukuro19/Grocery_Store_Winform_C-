@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSearchAcc = new MetroFramework.Controls.MetroTextBox();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -59,9 +58,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.gbUser = new System.Windows.Forms.GroupBox();
             this.btReste_Password = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbAccNote = new System.Windows.Forms.Label();
             this.btProperties = new System.Windows.Forms.Button();
             this.btRemove = new System.Windows.Forms.Button();
@@ -73,62 +74,24 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroTabPage3.SuspendLayout();
             this.gbUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvUser)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(170)))));
-            this.panel1.Controls.Add(this.txtSearchAcc);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 580);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1104, 105);
             this.panel1.TabIndex = 7;
-            // 
-            // txtSearchAcc
-            // 
-            this.txtSearchAcc.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            // 
-            // 
-            // 
-            this.txtSearchAcc.CustomButton.Image = null;
-            this.txtSearchAcc.CustomButton.Location = new System.Drawing.Point(430, 1);
-            this.txtSearchAcc.CustomButton.Name = "";
-            this.txtSearchAcc.CustomButton.Size = new System.Drawing.Size(37, 37);
-            this.txtSearchAcc.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearchAcc.CustomButton.TabIndex = 1;
-            this.txtSearchAcc.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSearchAcc.CustomButton.UseSelectable = true;
-            this.txtSearchAcc.CustomButton.Visible = false;
-            this.txtSearchAcc.Lines = new string[0];
-            this.txtSearchAcc.Location = new System.Drawing.Point(350, 37);
-            this.txtSearchAcc.MaxLength = 32767;
-            this.txtSearchAcc.Multiline = true;
-            this.txtSearchAcc.Name = "txtSearchAcc";
-            this.txtSearchAcc.PasswordChar = '\0';
-            this.txtSearchAcc.PromptText = "Tìm kiếm ở đây";
-            this.txtSearchAcc.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearchAcc.SelectedText = "";
-            this.txtSearchAcc.SelectionLength = 0;
-            this.txtSearchAcc.SelectionStart = 0;
-            this.txtSearchAcc.ShortcutsEnabled = true;
-            this.txtSearchAcc.Size = new System.Drawing.Size(468, 39);
-            this.txtSearchAcc.TabIndex = 4;
-            this.txtSearchAcc.UseSelectable = true;
-            this.txtSearchAcc.WaterMark = "Tìm kiếm ở đây";
-            this.txtSearchAcc.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearchAcc.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroTabControl1
             // 
@@ -162,7 +125,7 @@
             this.metroTabPage1.Controls.Add(this.label1);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 3;
+            this.metroTabPage1.HorizontalScrollbarSize = 2;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Name = "metroTabPage1";
             this.metroTabPage1.Size = new System.Drawing.Size(1051, 448);
@@ -170,7 +133,7 @@
             this.metroTabPage1.Text = "Tạo Tài Khoản";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 3;
+            this.metroTabPage1.VerticalScrollbarSize = 2;
             // 
             // txtPhone
             // 
@@ -348,7 +311,7 @@
             this.metroTabPage2.Controls.Add(this.pictureBox1);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 3;
+            this.metroTabPage2.HorizontalScrollbarSize = 2;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage2.Name = "metroTabPage2";
             this.metroTabPage2.Size = new System.Drawing.Size(1051, 448);
@@ -356,7 +319,7 @@
             this.metroTabPage2.Text = "Đổi Mật Khẩu";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 3;
+            this.metroTabPage2.VerticalScrollbarSize = 2;
             // 
             // lbUsername
             // 
@@ -455,6 +418,15 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "Mật khẩu gần đây :";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::cuuhangluuniem2.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(66, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 61);
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.gbUser);
@@ -463,7 +435,7 @@
             this.metroTabPage3.Controls.Add(this.dtgvUser);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.HorizontalScrollbarSize = 3;
+            this.metroTabPage3.HorizontalScrollbarSize = 2;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage3.Name = "metroTabPage3";
             this.metroTabPage3.Size = new System.Drawing.Size(1051, 448);
@@ -471,7 +443,7 @@
             this.metroTabPage3.Text = "Tài khoản hoạt động/không hoạt động";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.VerticalScrollbarSize = 3;
+            this.metroTabPage3.VerticalScrollbarSize = 2;
             // 
             // gbUser
             // 
@@ -498,6 +470,16 @@
             this.btReste_Password.Text = "Reset Password";
             this.btReste_Password.UseVisualStyleBackColor = false;
             this.btReste_Password.Click += new System.EventHandler(this.btReste_Password_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::cuuhangluuniem2.Properties.Resources.shield;
+            this.pictureBox2.Location = new System.Drawing.Point(14, 24);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // lbAccNote
             // 
@@ -543,14 +525,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvUser.BackgroundColor = System.Drawing.Color.White;
             this.dtgvUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(170)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(170)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvUser.ColumnHeadersHeight = 30;
             this.dtgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -626,25 +608,6 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 101;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::cuuhangluuniem2.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(66, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 61);
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::cuuhangluuniem2.Properties.Resources.shield;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 24);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // UserAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -661,18 +624,17 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tài Khoản Người Dùng";
             this.Load += new System.EventHandler(this.UserAccount_Load);
-            this.panel1.ResumeLayout(false);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.metroTabPage3.ResumeLayout(false);
             this.gbUser.ResumeLayout(false);
             this.gbUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -680,7 +642,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private MetroFramework.Controls.MetroTextBox txtSearchAcc;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private System.Windows.Forms.Label label1;

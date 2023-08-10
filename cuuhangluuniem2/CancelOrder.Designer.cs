@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -58,10 +59,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.btCOrder = new System.Windows.Forms.Button();
             this.udCancelQty = new System.Windows.Forms.NumericUpDown();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.udCancelQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udCancelQty)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,6 +76,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1085, 83);
             this.panel1.TabIndex = 28;
+            // 
+            // picClose
+            // 
+            this.picClose.Image = global::cuuhangluuniem2.Properties.Resources.button_57357751;
+            this.picClose.Location = new System.Drawing.Point(1032, 12);
+            this.picClose.Margin = new System.Windows.Forms.Padding(4);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(32, 32);
+            this.picClose.TabIndex = 1;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // label1
             // 
@@ -250,7 +261,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 446);
+            this.label12.Location = new System.Drawing.Point(16, 403);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(125, 20);
             this.label12.TabIndex = 49;
@@ -274,7 +285,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 398);
+            this.label13.Location = new System.Drawing.Point(12, 451);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(133, 20);
             this.label13.TabIndex = 45;
@@ -346,17 +357,6 @@
             this.udCancelQty.TabIndex = 58;
             this.udCancelQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // picClose
-            // 
-            this.picClose.Image = global::cuuhangluuniem2.Properties.Resources.button_57357751;
-            this.picClose.Location = new System.Drawing.Point(1032, 12);
-            this.picClose.Margin = new System.Windows.Forms.Padding(4);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(32, 32);
-            this.picClose.TabIndex = 1;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
-            // 
             // CancelOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -399,8 +399,8 @@
             this.Text = "Thông Tin Hủy Đơn Hàng";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.udCancelQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udCancelQty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

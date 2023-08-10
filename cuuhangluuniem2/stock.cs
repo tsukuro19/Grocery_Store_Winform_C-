@@ -99,7 +99,7 @@ namespace cuuhangluuniem2
                         {
                             //update product quantity
                             cn.Open();
-                            cm=new SqlCommand("update tbProduct1 set qty = qty + "+ int.Parse(dtgvStockin.Rows[i].Cells[5].Value.ToString())+" where pcode like '" + dtgvStockin.Rows[i].Cells[3].Value.ToString()+"'",cn);
+                            cm=new SqlCommand("update tbProduct1 set qty = qty + "+ int.Parse(dtgvStockin.Rows[i].Cells[5].Value.ToString())+", reorder=reorder+1 where pcode like '" + dtgvStockin.Rows[i].Cells[3].Value.ToString()+"'",cn);
                             cm.ExecuteNonQuery();
                             cn.Close();
 

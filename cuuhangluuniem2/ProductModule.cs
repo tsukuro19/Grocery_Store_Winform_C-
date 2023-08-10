@@ -81,6 +81,18 @@ namespace cuuhangluuniem2
                     cn.Open();
                     cm.ExecuteNonQuery();
                     cn.Close();
+                    
+                    cm = new SqlCommand("insert into tbInventory(pcode,barcode,pdesc,bid,cid,price) values (@pcode,@barcode,@pdesc,@bid,@cid,@price)", cn);
+                    cm.Parameters.AddWithValue("@pcode", txtPcode.Text);
+                    cm.Parameters.AddWithValue("@barcode", txtBarcode.Text);
+                    cm.Parameters.AddWithValue("@pdesc", txtPdesc.Text);
+                    cm.Parameters.AddWithValue("@bid", cbBrand.SelectedValue);
+                    cm.Parameters.AddWithValue("@cid", cbCategory.SelectedValue);
+                    cm.Parameters.AddWithValue("@price", double.Parse(txtPrice.Text));
+                    cn.Open();
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+
                     MessageBox.Show("Sản phẩm đã được lưu thành công","Thông Báo");
                     Clear();
                     product.LoadProduct();

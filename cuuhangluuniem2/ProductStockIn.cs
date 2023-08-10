@@ -57,27 +57,29 @@ namespace cuuhangluuniem2
                 {
                     MessageBox.Show("Bạn chưa nhập tên người nhập hàng?","Thông Báo",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     stockIn.txtStockInBy.Focus();
-                    this.Dispose();
+                    //this.Dispose();
                 }
-                if(MessageBox.Show("Bạn muốn thêm sản phẩm?","Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    try
+                else {
+                    if (MessageBox.Show("Bạn muốn thêm sản phẩm?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        cn.Open();
-                        cm = new SqlCommand("insert into tbStockIn (refno,pcode,sdate,stockinby,supplierid) values (@refno,@pcode,@sdate,@stockinby,@supplierid)",cn);
-                        cm.Parameters.AddWithValue("@refno",stockIn.txtRefNo.Text);
-                        cm.Parameters.AddWithValue("@pcode", dtgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString());
-                        cm.Parameters.AddWithValue("@sdate", stockIn.dtStockIn.Value);
-                        cm.Parameters.AddWithValue("@stockinby", stockIn.txtStockInBy.Text);
-                        cm.Parameters.AddWithValue("@supplierid", stockIn.lbid.Text);
-                        cm.ExecuteNonQuery();
-                        cn.Close();
-                        stockIn.LoadStocIn();
-                        MessageBox.Show("Đã thêm sản phẩm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Thông Báo");
+                        try
+                        {
+                            cn.Open();
+                            cm = new SqlCommand("insert into tbStockIn (refno,pcode,sdate,stockinby,supplierid) values (@refno,@pcode,@sdate,@stockinby,@supplierid)", cn);
+                            cm.Parameters.AddWithValue("@refno", stockIn.txtRefNo.Text);
+                            cm.Parameters.AddWithValue("@pcode", dtgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString());
+                            cm.Parameters.AddWithValue("@sdate", stockIn.dtStockIn.Value);
+                            cm.Parameters.AddWithValue("@stockinby", stockIn.txtStockInBy.Text);
+                            cm.Parameters.AddWithValue("@supplierid", stockIn.lbid.Text);
+                            cm.ExecuteNonQuery();
+                            cn.Close();
+                            stockIn.LoadStocIn();
+                            MessageBox.Show("Đã thêm sản phẩm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Thông Báo");
+                        }
                     }
                 }
             }

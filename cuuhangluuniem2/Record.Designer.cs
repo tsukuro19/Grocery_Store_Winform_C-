@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dtFromStockIn));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,9 +41,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dtFromStockIn));
             this.panel1 = new System.Windows.Forms.Panel();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -51,6 +51,8 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btLoadTopSell = new System.Windows.Forms.Button();
+            this.btnPrintTopSale = new System.Windows.Forms.Button();
             this.cbTopSell = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtToTopSell = new System.Windows.Forms.DateTimePicker();
@@ -58,35 +60,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dtgvSoldItems = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbTotal = new System.Windows.Forms.Label();
+            this.btLoadSoldItems = new System.Windows.Forms.Button();
+            this.btPrintSoldItems = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dtToSoldItems = new System.Windows.Forms.DateTimePicker();
             this.dtFromSoldItems = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dtgvCriticalItems = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dtgvInventory = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btPrintInventory = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dtgvCancel = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,6 +94,8 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btLoadCancel = new System.Windows.Forms.Button();
+            this.btPrintCancel = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dtToCancel = new System.Windows.Forms.DateTimePicker();
             this.dtFromCancel = new System.Windows.Forms.DateTimePicker();
@@ -115,26 +111,28 @@
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btLoadStockIn = new System.Windows.Forms.Button();
+            this.btPrintStockIn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dtToStockIn = new System.Windows.Forms.DateTimePicker();
             this.dtFromStockIn2 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btLoadTopSell = new System.Windows.Forms.Button();
-            this.btnPrintTopSale = new System.Windows.Forms.Button();
-            this.btLoadSoldItems = new System.Windows.Forms.Button();
-            this.btPrintSoldItems = new System.Windows.Forms.Button();
-            this.btPrintInventory = new System.Windows.Forms.Button();
-            this.btLoadCancel = new System.Windows.Forms.Button();
-            this.btPrintCancel = new System.Windows.Forms.Button();
-            this.btLoadStockIn = new System.Windows.Forms.Button();
-            this.btPrintStockIn = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTopSelling)).BeginInit();
@@ -175,7 +173,7 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 5;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(1269, 652);
             this.metroTabControl1.TabIndex = 8;
             this.metroTabControl1.UseSelectable = true;
@@ -276,6 +274,33 @@
             this.panel2.Size = new System.Drawing.Size(1261, 93);
             this.panel2.TabIndex = 0;
             // 
+            // btLoadTopSell
+            // 
+            this.btLoadTopSell.FlatAppearance.BorderSize = 0;
+            this.btLoadTopSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLoadTopSell.Image = ((System.Drawing.Image)(resources.GetObject("btLoadTopSell.Image")));
+            this.btLoadTopSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLoadTopSell.Location = new System.Drawing.Point(642, 18);
+            this.btLoadTopSell.Name = "btLoadTopSell";
+            this.btLoadTopSell.Size = new System.Drawing.Size(136, 49);
+            this.btLoadTopSell.TabIndex = 37;
+            this.btLoadTopSell.Text = "Tải Dữ Liệu";
+            this.btLoadTopSell.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btLoadTopSell.UseVisualStyleBackColor = true;
+            this.btLoadTopSell.Click += new System.EventHandler(this.btLoadTopSell_Click);
+            // 
+            // btnPrintTopSale
+            // 
+            this.btnPrintTopSale.FlatAppearance.BorderSize = 0;
+            this.btnPrintTopSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintTopSale.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintTopSale.Image")));
+            this.btnPrintTopSale.Location = new System.Drawing.Point(784, 18);
+            this.btnPrintTopSale.Name = "btnPrintTopSale";
+            this.btnPrintTopSale.Size = new System.Drawing.Size(38, 47);
+            this.btnPrintTopSale.TabIndex = 36;
+            this.btnPrintTopSale.UseVisualStyleBackColor = true;
+            this.btnPrintTopSale.Click += new System.EventHandler(this.btnPrintTopSale_Click);
+            // 
             // cbTopSell
             // 
             this.cbTopSell.FormattingEnabled = true;
@@ -368,6 +393,64 @@
             this.dtgvSoldItems.Size = new System.Drawing.Size(1261, 517);
             this.dtgvSoldItems.TabIndex = 10;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.HeaderText = "No";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 58;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Mã Sản Phẩm";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 139;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Sản Phẩm";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // Column15
+            // 
+            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column15.HeaderText = "Đơn Giá";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            this.Column15.Width = 98;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Số Lượng";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 108;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column3.HeaderText = "Giảm Giá";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Tổng Tiền";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 111;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -394,6 +477,33 @@
             this.lbTotal.TabIndex = 38;
             this.lbTotal.Text = "0.00";
             this.lbTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btLoadSoldItems
+            // 
+            this.btLoadSoldItems.FlatAppearance.BorderSize = 0;
+            this.btLoadSoldItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLoadSoldItems.Image = ((System.Drawing.Image)(resources.GetObject("btLoadSoldItems.Image")));
+            this.btLoadSoldItems.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLoadSoldItems.Location = new System.Drawing.Point(460, 16);
+            this.btLoadSoldItems.Name = "btLoadSoldItems";
+            this.btLoadSoldItems.Size = new System.Drawing.Size(136, 49);
+            this.btLoadSoldItems.TabIndex = 37;
+            this.btLoadSoldItems.Text = "Tải Dữ Liệu";
+            this.btLoadSoldItems.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btLoadSoldItems.UseVisualStyleBackColor = true;
+            this.btLoadSoldItems.Click += new System.EventHandler(this.btLoadSoldItems_Click);
+            // 
+            // btPrintSoldItems
+            // 
+            this.btPrintSoldItems.FlatAppearance.BorderSize = 0;
+            this.btPrintSoldItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPrintSoldItems.Image = ((System.Drawing.Image)(resources.GetObject("btPrintSoldItems.Image")));
+            this.btPrintSoldItems.Location = new System.Drawing.Point(602, 16);
+            this.btPrintSoldItems.Name = "btPrintSoldItems";
+            this.btPrintSoldItems.Size = new System.Drawing.Size(38, 47);
+            this.btPrintSoldItems.TabIndex = 36;
+            this.btPrintSoldItems.UseVisualStyleBackColor = true;
+            this.btPrintSoldItems.Click += new System.EventHandler(this.btPrintSoldItems_Click);
             // 
             // label3
             // 
@@ -464,7 +574,6 @@
             this.Column5,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
-            this.Column8,
             this.Column9});
             this.dtgvCriticalItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvCriticalItems.EnableHeadersVisualStyles = false;
@@ -475,77 +584,6 @@
             this.dtgvCriticalItems.RowTemplate.Height = 24;
             this.dtgvCriticalItems.Size = new System.Drawing.Size(1261, 610);
             this.dtgvCriticalItems.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn6.HeaderText = "No";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 58;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Mã Sản Phẩm";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 139;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Mã Vạch";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 102;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.HeaderText = "Sản Phẩm";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "Hãng Sản Xuất";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 146;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn10.HeaderText = "Loại Sản Phẩm";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 147;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn11.HeaderText = "Giá";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 61;
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column8.HeaderText = "Đặt Lại";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 90;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column9.HeaderText = "Hàng Có Sẵn";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 132;
             // 
             // tabPage4
             // 
@@ -581,8 +619,7 @@
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20});
+            this.dataGridViewTextBoxColumn19});
             this.dtgvInventory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvInventory.EnableHeadersVisualStyles = false;
             this.dtgvInventory.Location = new System.Drawing.Point(0, 72);
@@ -593,77 +630,6 @@
             this.dtgvInventory.Size = new System.Drawing.Size(1261, 538);
             this.dtgvInventory.TabIndex = 9;
             // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn12.HeaderText = "No";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 58;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn13.HeaderText = "Mã Sản Phẩm";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 139;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn14.HeaderText = "Mã Vạch";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.Width = 102;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn15.HeaderText = "Sản Phẩm";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn16.HeaderText = "Hãng Sản Xuất";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.Width = 146;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn17.HeaderText = "Loại Sản Phẩm";
-            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.Width = 147;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn18.HeaderText = "Giá";
-            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.Width = 61;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn19.HeaderText = "Số Lượng";
-            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.Width = 108;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn20.HeaderText = "Đặt Lại";
-            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Width = 90;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.btPrintInventory);
@@ -672,6 +638,18 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1261, 72);
             this.panel4.TabIndex = 0;
+            // 
+            // btPrintInventory
+            // 
+            this.btPrintInventory.FlatAppearance.BorderSize = 0;
+            this.btPrintInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPrintInventory.Image = ((System.Drawing.Image)(resources.GetObject("btPrintInventory.Image")));
+            this.btPrintInventory.Location = new System.Drawing.Point(971, 3);
+            this.btPrintInventory.Name = "btPrintInventory";
+            this.btPrintInventory.Size = new System.Drawing.Size(38, 47);
+            this.btPrintInventory.TabIndex = 37;
+            this.btPrintInventory.UseVisualStyleBackColor = true;
+            this.btPrintInventory.Click += new System.EventHandler(this.btPrintInventory_Click);
             // 
             // tabPage5
             // 
@@ -816,6 +794,33 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1261, 93);
             this.panel5.TabIndex = 2;
+            // 
+            // btLoadCancel
+            // 
+            this.btLoadCancel.FlatAppearance.BorderSize = 0;
+            this.btLoadCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLoadCancel.Image = ((System.Drawing.Image)(resources.GetObject("btLoadCancel.Image")));
+            this.btLoadCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLoadCancel.Location = new System.Drawing.Point(460, 16);
+            this.btLoadCancel.Name = "btLoadCancel";
+            this.btLoadCancel.Size = new System.Drawing.Size(136, 49);
+            this.btLoadCancel.TabIndex = 37;
+            this.btLoadCancel.Text = "Tải Dữ Liệu";
+            this.btLoadCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btLoadCancel.UseVisualStyleBackColor = true;
+            this.btLoadCancel.Click += new System.EventHandler(this.btLoadCancel_Click);
+            // 
+            // btPrintCancel
+            // 
+            this.btPrintCancel.FlatAppearance.BorderSize = 0;
+            this.btPrintCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPrintCancel.Image = ((System.Drawing.Image)(resources.GetObject("btPrintCancel.Image")));
+            this.btPrintCancel.Location = new System.Drawing.Point(956, 16);
+            this.btPrintCancel.Name = "btPrintCancel";
+            this.btPrintCancel.Size = new System.Drawing.Size(38, 47);
+            this.btPrintCancel.TabIndex = 36;
+            this.btPrintCancel.UseVisualStyleBackColor = true;
+            this.btPrintCancel.Click += new System.EventHandler(this.btPrintCancel_Click);
             // 
             // label6
             // 
@@ -979,6 +984,33 @@
             this.panel6.Size = new System.Drawing.Size(1261, 93);
             this.panel6.TabIndex = 12;
             // 
+            // btLoadStockIn
+            // 
+            this.btLoadStockIn.FlatAppearance.BorderSize = 0;
+            this.btLoadStockIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLoadStockIn.Image = ((System.Drawing.Image)(resources.GetObject("btLoadStockIn.Image")));
+            this.btLoadStockIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLoadStockIn.Location = new System.Drawing.Point(460, 16);
+            this.btLoadStockIn.Name = "btLoadStockIn";
+            this.btLoadStockIn.Size = new System.Drawing.Size(136, 49);
+            this.btLoadStockIn.TabIndex = 37;
+            this.btLoadStockIn.Text = "Tải Dữ Liệu";
+            this.btLoadStockIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btLoadStockIn.UseVisualStyleBackColor = true;
+            this.btLoadStockIn.Click += new System.EventHandler(this.btLoadStockIn_Click);
+            // 
+            // btPrintStockIn
+            // 
+            this.btPrintStockIn.FlatAppearance.BorderSize = 0;
+            this.btPrintStockIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPrintStockIn.Image = ((System.Drawing.Image)(resources.GetObject("btPrintStockIn.Image")));
+            this.btPrintStockIn.Location = new System.Drawing.Point(956, 16);
+            this.btPrintStockIn.Name = "btPrintStockIn";
+            this.btPrintStockIn.Size = new System.Drawing.Size(38, 47);
+            this.btPrintStockIn.TabIndex = 36;
+            this.btPrintStockIn.UseVisualStyleBackColor = true;
+            this.btPrintStockIn.Click += new System.EventHandler(this.btPrintStockIn_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -1015,183 +1047,131 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Lọc Theo Ngày : Từ";
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn12
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.HeaderText = "No";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 58;
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn12.HeaderText = "No";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 58;
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridViewTextBoxColumn13
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Mã Sản Phẩm";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 139;
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn13.HeaderText = "Mã Sản Phẩm";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Width = 139;
             // 
-            // dataGridViewTextBoxColumn3
+            // dataGridViewTextBoxColumn14
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Sản Phẩm";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn14.HeaderText = "Mã Vạch";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Width = 102;
             // 
-            // Column15
+            // dataGridViewTextBoxColumn15
             // 
-            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column15.HeaderText = "Đơn Giá";
-            this.Column15.MinimumWidth = 6;
-            this.Column15.Name = "Column15";
-            this.Column15.Width = 98;
+            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn15.HeaderText = "Sản Phẩm";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
-            // dataGridViewTextBoxColumn4
+            // dataGridViewTextBoxColumn16
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Số Lượng";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 108;
+            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn16.HeaderText = "Hãng Sản Xuất";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Width = 146;
             // 
-            // Column3
+            // dataGridViewTextBoxColumn17
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column3.HeaderText = "Giảm Giá";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
+            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn17.HeaderText = "Loại Sản Phẩm";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Width = 147;
             // 
-            // dataGridViewTextBoxColumn5
+            // dataGridViewTextBoxColumn18
             // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Tổng Tiền";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 111;
+            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn18.HeaderText = "Giá";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Width = 61;
             // 
-            // btLoadTopSell
+            // dataGridViewTextBoxColumn19
             // 
-            this.btLoadTopSell.FlatAppearance.BorderSize = 0;
-            this.btLoadTopSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLoadTopSell.Image = ((System.Drawing.Image)(resources.GetObject("btLoadTopSell.Image")));
-            this.btLoadTopSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLoadTopSell.Location = new System.Drawing.Point(642, 18);
-            this.btLoadTopSell.Name = "btLoadTopSell";
-            this.btLoadTopSell.Size = new System.Drawing.Size(136, 49);
-            this.btLoadTopSell.TabIndex = 37;
-            this.btLoadTopSell.Text = "Tải Dữ Liệu";
-            this.btLoadTopSell.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btLoadTopSell.UseVisualStyleBackColor = true;
-            this.btLoadTopSell.Click += new System.EventHandler(this.btLoadTopSell_Click);
+            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn19.HeaderText = "Số Lượng";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Width = 108;
             // 
-            // btnPrintTopSale
+            // dataGridViewTextBoxColumn6
             // 
-            this.btnPrintTopSale.FlatAppearance.BorderSize = 0;
-            this.btnPrintTopSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintTopSale.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintTopSale.Image")));
-            this.btnPrintTopSale.Location = new System.Drawing.Point(784, 18);
-            this.btnPrintTopSale.Name = "btnPrintTopSale";
-            this.btnPrintTopSale.Size = new System.Drawing.Size(38, 47);
-            this.btnPrintTopSale.TabIndex = 36;
-            this.btnPrintTopSale.UseVisualStyleBackColor = true;
-            this.btnPrintTopSale.Click += new System.EventHandler(this.btnPrintTopSale_Click);
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn6.HeaderText = "No";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 58;
             // 
-            // btLoadSoldItems
+            // dataGridViewTextBoxColumn7
             // 
-            this.btLoadSoldItems.FlatAppearance.BorderSize = 0;
-            this.btLoadSoldItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLoadSoldItems.Image = ((System.Drawing.Image)(resources.GetObject("btLoadSoldItems.Image")));
-            this.btLoadSoldItems.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLoadSoldItems.Location = new System.Drawing.Point(460, 16);
-            this.btLoadSoldItems.Name = "btLoadSoldItems";
-            this.btLoadSoldItems.Size = new System.Drawing.Size(136, 49);
-            this.btLoadSoldItems.TabIndex = 37;
-            this.btLoadSoldItems.Text = "Tải Dữ Liệu";
-            this.btLoadSoldItems.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btLoadSoldItems.UseVisualStyleBackColor = true;
-            this.btLoadSoldItems.Click += new System.EventHandler(this.btLoadSoldItems_Click);
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Mã Sản Phẩm";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 139;
             // 
-            // btPrintSoldItems
+            // dataGridViewTextBoxColumn8
             // 
-            this.btPrintSoldItems.FlatAppearance.BorderSize = 0;
-            this.btPrintSoldItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPrintSoldItems.Image = ((System.Drawing.Image)(resources.GetObject("btPrintSoldItems.Image")));
-            this.btPrintSoldItems.Location = new System.Drawing.Point(602, 16);
-            this.btPrintSoldItems.Name = "btPrintSoldItems";
-            this.btPrintSoldItems.Size = new System.Drawing.Size(38, 47);
-            this.btPrintSoldItems.TabIndex = 36;
-            this.btPrintSoldItems.UseVisualStyleBackColor = true;
-            this.btPrintSoldItems.Click += new System.EventHandler(this.btPrintSoldItems_Click);
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Mã Vạch";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 102;
             // 
-            // btPrintInventory
+            // dataGridViewTextBoxColumn9
             // 
-            this.btPrintInventory.FlatAppearance.BorderSize = 0;
-            this.btPrintInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPrintInventory.Image = ((System.Drawing.Image)(resources.GetObject("btPrintInventory.Image")));
-            this.btPrintInventory.Location = new System.Drawing.Point(971, 3);
-            this.btPrintInventory.Name = "btPrintInventory";
-            this.btPrintInventory.Size = new System.Drawing.Size(38, 47);
-            this.btPrintInventory.TabIndex = 37;
-            this.btPrintInventory.UseVisualStyleBackColor = true;
-            this.btPrintInventory.Click += new System.EventHandler(this.btPrintInventory_Click);
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Sản Phẩm";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // btLoadCancel
+            // Column5
             // 
-            this.btLoadCancel.FlatAppearance.BorderSize = 0;
-            this.btLoadCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLoadCancel.Image = ((System.Drawing.Image)(resources.GetObject("btLoadCancel.Image")));
-            this.btLoadCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLoadCancel.Location = new System.Drawing.Point(460, 16);
-            this.btLoadCancel.Name = "btLoadCancel";
-            this.btLoadCancel.Size = new System.Drawing.Size(136, 49);
-            this.btLoadCancel.TabIndex = 37;
-            this.btLoadCancel.Text = "Tải Dữ Liệu";
-            this.btLoadCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btLoadCancel.UseVisualStyleBackColor = true;
-            this.btLoadCancel.Click += new System.EventHandler(this.btLoadCancel_Click);
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column5.HeaderText = "Hãng Sản Xuất";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 146;
             // 
-            // btPrintCancel
+            // dataGridViewTextBoxColumn10
             // 
-            this.btPrintCancel.FlatAppearance.BorderSize = 0;
-            this.btPrintCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPrintCancel.Image = ((System.Drawing.Image)(resources.GetObject("btPrintCancel.Image")));
-            this.btPrintCancel.Location = new System.Drawing.Point(956, 16);
-            this.btPrintCancel.Name = "btPrintCancel";
-            this.btPrintCancel.Size = new System.Drawing.Size(38, 47);
-            this.btPrintCancel.TabIndex = 36;
-            this.btPrintCancel.UseVisualStyleBackColor = true;
-            this.btPrintCancel.Click += new System.EventHandler(this.btPrintCancel_Click);
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Loại Sản Phẩm";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 147;
             // 
-            // btLoadStockIn
+            // dataGridViewTextBoxColumn11
             // 
-            this.btLoadStockIn.FlatAppearance.BorderSize = 0;
-            this.btLoadStockIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLoadStockIn.Image = ((System.Drawing.Image)(resources.GetObject("btLoadStockIn.Image")));
-            this.btLoadStockIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLoadStockIn.Location = new System.Drawing.Point(460, 16);
-            this.btLoadStockIn.Name = "btLoadStockIn";
-            this.btLoadStockIn.Size = new System.Drawing.Size(136, 49);
-            this.btLoadStockIn.TabIndex = 37;
-            this.btLoadStockIn.Text = "Tải Dữ Liệu";
-            this.btLoadStockIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btLoadStockIn.UseVisualStyleBackColor = true;
-            this.btLoadStockIn.Click += new System.EventHandler(this.btLoadStockIn_Click);
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn11.HeaderText = "Giá";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 61;
             // 
-            // btPrintStockIn
+            // Column9
             // 
-            this.btPrintStockIn.FlatAppearance.BorderSize = 0;
-            this.btPrintStockIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPrintStockIn.Image = ((System.Drawing.Image)(resources.GetObject("btPrintStockIn.Image")));
-            this.btPrintStockIn.Location = new System.Drawing.Point(956, 16);
-            this.btPrintStockIn.Name = "btPrintStockIn";
-            this.btPrintStockIn.Size = new System.Drawing.Size(38, 47);
-            this.btPrintStockIn.TabIndex = 36;
-            this.btPrintStockIn.UseVisualStyleBackColor = true;
-            this.btPrintStockIn.Click += new System.EventHandler(this.btPrintStockIn_Click);
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column9.HeaderText = "Hàng Có Sẵn";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 132;
             // 
             // dtFromStockIn
             // 
@@ -1266,25 +1246,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.DataGridView dtgvCriticalItems;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridView dtgvInventory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btPrintInventory;
         private System.Windows.Forms.DataGridView dtgvCancel;
@@ -1328,5 +1290,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
     }
 }

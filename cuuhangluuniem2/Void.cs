@@ -50,9 +50,9 @@ namespace cuuhangluuniem2
                     SaveCancelOrder(username);
                     if(cancelOrder.cbInventory.Text == "YES")
                     {
-                        dBConnect.ExecuteQuerry("update tbProduct1 set qty = qty +" + cancelOrder.udCancelQty.Value + " where pcode = '" + cancelOrder.txtPcode.Text + "'");
+                        dBConnect.ExecuteQuerry("update tbInventory set qty = qty +" + cancelOrder.udCancelQty.Value + " where pcode = '" + cancelOrder.txtPcode.Text + "'");
                     }
-                    dBConnect.ExecuteQuerry("update tbCart set qty= qty + " + cancelOrder.udCancelQty.Value + " where id like '" + cancelOrder.txtID.Text + "'");
+                    dBConnect.ExecuteQuerry("delete tbCart where id like '" + cancelOrder.txtID.Text + "'");
                     MessageBox.Show("Hủy đơn hàng thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Dispose();
                     cancelOrder.ReloadSoldList();

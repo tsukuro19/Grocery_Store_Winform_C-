@@ -100,12 +100,12 @@ namespace cuuhangluuniem2
                 dtgvCriticalItems.Rows.Clear();
                 int i = 0;
                 cn.Open();
-                cm = new SqlCommand("select * from vwCriticalItems",cn);
+                cm = new SqlCommand("select * from vwCriticalItems1",cn);
                 dr=cm.ExecuteReader();
                 while (dr.Read())
                 {
                     i++;
-                    dtgvCriticalItems.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[7].ToString(), dr[6].ToString());
+                    dtgvCriticalItems.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString());
                 }
                 dr.Close();
                 cn.Close();
@@ -123,12 +123,12 @@ namespace cuuhangluuniem2
                 dtgvInventory.Rows.Clear();
                 int i = 0;
                 cn.Open();
-                cm = new SqlCommand("select * from vwInventoryList", cn);
+                cm = new SqlCommand("select * from vwInventoryList1", cn);
                 dr = cm.ExecuteReader();
                 while (dr.Read())
                 {
                     i++;
-                    dtgvInventory.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[7].ToString(), dr[6].ToString());
+                    dtgvInventory.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString());
                 }
                 dr.Close();
                 cn.Close();
@@ -207,7 +207,7 @@ namespace cuuhangluuniem2
         private void btPrintInventory_Click(object sender, EventArgs e)
         {
             PrintInventoryList report=new PrintInventoryList();
-            report.LoadInventoryList("select * from vwInventoryList");
+            report.LoadInventoryList("select * from vwInventoryList1");
             report.ShowDialog();
         }
 

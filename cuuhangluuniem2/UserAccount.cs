@@ -70,6 +70,16 @@ namespace cuuhangluuniem2
                     MessageBox.Show("Mật khẩu nhập lại không trùng nhau","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     return;
                 }
+                //check account exist
+                cn.Open();
+                cm=new SqlCommand("select username from tbUser where username = '"+txtUser.Text+"'", cn);
+                string check_username = (string)cm.ExecuteScalar();
+                cn.Close() ;
+                if(check_username==txtUser.Text)
+                {
+                    MessageBox.Show("Tài khoản đã tồn tại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 cn.Open();
                 cm=new SqlCommand("insert into tbUser (username,password,role,fullname,phone,identity_card) values(@username,@password,@role,@fullname,@phone,@identity_card)",cn);
                 cm.Parameters.AddWithValue("@username",txtUser.Text);

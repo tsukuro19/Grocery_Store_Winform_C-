@@ -203,11 +203,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(533, 307);
+            this.label8.Location = new System.Drawing.Point(501, 312);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 22);
+            this.label8.Size = new System.Drawing.Size(126, 22);
             this.label8.TabIndex = 19;
-            this.label8.Text = "Số lượng :";
+            this.label8.Text = "Số lần đặt lại :";
             // 
             // txtBarcode
             // 

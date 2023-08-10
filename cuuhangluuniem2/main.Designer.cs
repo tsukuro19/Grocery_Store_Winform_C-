@@ -55,20 +55,20 @@
             this.label_Name = new System.Windows.Forms.Label();
             this.label_Admin = new System.Windows.Forms.Label();
             this.label_User = new System.Windows.Forms.Label();
+            this.pictureAdmin = new System.Windows.Forms.PictureBox();
             this.panel_Title = new System.Windows.Forms.Panel();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.label_Title = new System.Windows.Forms.Label();
             this.panel_Main = new System.Windows.Forms.Panel();
-            this.picClose = new System.Windows.Forms.PictureBox();
-            this.pictureAdmin = new System.Windows.Forms.PictureBox();
             this.panel_Slide.SuspendLayout();
             this.panel_SubSetting.SuspendLayout();
             this.panel_Subrecord.SuspendLayout();
             this.panel_SubStock.SuspendLayout();
             this.panel_SubProduct.SuspendLayout();
             this.panel_Logo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAdmin)).BeginInit();
             this.panel_Title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Slide
@@ -465,7 +465,16 @@
             this.label_User.Size = new System.Drawing.Size(50, 22);
             this.label_User.TabIndex = 3;
             this.label_User.Text = "User";
-            this.label_User.Click += new System.EventHandler(this.label1_Click);
+
+            // 
+            // pictureAdmin
+            // 
+            this.pictureAdmin.Image = global::cuuhangluuniem2.Properties.Resources.user_image_with_black_background;
+            this.pictureAdmin.Location = new System.Drawing.Point(33, 6);
+            this.pictureAdmin.Name = "pictureAdmin";
+            this.pictureAdmin.Size = new System.Drawing.Size(134, 125);
+            this.pictureAdmin.TabIndex = 4;
+            this.pictureAdmin.TabStop = false;
             // 
             // panel_Title
             // 
@@ -476,28 +485,6 @@
             this.panel_Title.Name = "panel_Title";
             this.panel_Title.Size = new System.Drawing.Size(1159, 100);
             this.panel_Title.TabIndex = 1;
-            // 
-            // label_Title
-            // 
-            this.label_Title.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Title.ForeColor = System.Drawing.Color.White;
-            this.label_Title.Location = new System.Drawing.Point(310, 42);
-            this.label_Title.Name = "label_Title";
-            this.label_Title.Size = new System.Drawing.Size(394, 37);
-            this.label_Title.TabIndex = 4;
-            this.label_Title.Text = "Titlename";
-            this.label_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Title.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // panel_Main
-            // 
-            this.panel_Main.BackColor = System.Drawing.Color.White;
-            this.panel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Main.Location = new System.Drawing.Point(231, 100);
-            this.panel_Main.Name = "panel_Main";
-            this.panel_Main.Size = new System.Drawing.Size(1159, 658);
-            this.panel_Main.TabIndex = 2;
-            this.panel_Main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_Paint);
             // 
             // picClose
             // 
@@ -510,14 +497,26 @@
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
-            // pictureAdmin
+            // label_Title
             // 
-            this.pictureAdmin.Image = global::cuuhangluuniem2.Properties.Resources.user_image_with_black_background;
-            this.pictureAdmin.Location = new System.Drawing.Point(33, 6);
-            this.pictureAdmin.Name = "pictureAdmin";
-            this.pictureAdmin.Size = new System.Drawing.Size(134, 125);
-            this.pictureAdmin.TabIndex = 4;
-            this.pictureAdmin.TabStop = false;
+            this.label_Title.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Title.ForeColor = System.Drawing.Color.White;
+            this.label_Title.Location = new System.Drawing.Point(310, 42);
+            this.label_Title.Name = "label_Title";
+            this.label_Title.Size = new System.Drawing.Size(394, 37);
+            this.label_Title.TabIndex = 4;
+            this.label_Title.Text = "Titlename";
+            this.label_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel_Main
+            // 
+            this.panel_Main.BackColor = System.Drawing.Color.White;
+            this.panel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Main.Location = new System.Drawing.Point(231, 100);
+            this.panel_Main.Name = "panel_Main";
+            this.panel_Main.Size = new System.Drawing.Size(1159, 658);
+            this.panel_Main.TabIndex = 2;
+            this.panel_Main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_Paint);
             // 
             // Form1
             // 
@@ -536,6 +535,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bán Hàng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel_Slide.ResumeLayout(false);
             this.panel_SubSetting.ResumeLayout(false);
             this.panel_Subrecord.ResumeLayout(false);
@@ -543,9 +543,9 @@
             this.panel_SubProduct.ResumeLayout(false);
             this.panel_Logo.ResumeLayout(false);
             this.panel_Logo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAdmin)).EndInit();
             this.panel_Title.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureAdmin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -558,7 +558,6 @@
         private System.Windows.Forms.Button btCategory_Product;
         private System.Windows.Forms.Button btListProduct;
         private System.Windows.Forms.Button btProduct;
-        private System.Windows.Forms.Button btDashboard;
         private System.Windows.Forms.Panel panel_Logo;
         private System.Windows.Forms.Panel panel_Title;
         private System.Windows.Forms.Panel panel_Main;
@@ -584,6 +583,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lbUsername;
+        public System.Windows.Forms.Button btDashboard;
     }
 }
 

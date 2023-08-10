@@ -44,18 +44,17 @@ namespace cuuhangluuniem2
         private void btAdd_Brand_Click(object sender, EventArgs e)
         {
             ProductModule productModule = new ProductModule(this);
+            productModule.udreorder.Enabled = false;
             productModule.ShowDialog();
         }
 
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            LoadProduct();
-        }
+        
 
         private void btAdd_Brand_Click_1(object sender, EventArgs e)
         {
             ProductModule productModule = new ProductModule(this);
+            productModule.udreorder.Enabled = false;
             productModule.ShowDialog();
         }
         //Configure edit and delete record in database
@@ -76,6 +75,7 @@ namespace cuuhangluuniem2
                 product.txtPcode.Enabled = false;
                 product.btSave.Enabled = false;
                 product.btUpdate.Enabled = true;
+                product.udreorder.Enabled = true;
                 product.ShowDialog();
             }
             else if (colname == "Delete")
@@ -86,9 +86,19 @@ namespace cuuhangluuniem2
                     cm = new SqlCommand("delete from tbProduct1 where pcode like '" + dtgvProduct[1, e.RowIndex].Value.ToString() + "'", cn);
                     cm.ExecuteNonQuery();
                     cn.Close();
+
+                    cn.Open();
+                    cm = new SqlCommand("delete from tbInventory where pcode like '" + dtgvProduct[1, e.RowIndex].Value.ToString() + "'", cn);
+                    cm.ExecuteNonQuery();
+                    cn.Close();
                     MessageBox.Show("Sản phẩm đã được xóa khỏi danh sách", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            LoadProduct();
+        }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
             LoadProduct();
         }
     }

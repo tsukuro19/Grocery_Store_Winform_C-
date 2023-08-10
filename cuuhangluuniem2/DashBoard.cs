@@ -28,9 +28,9 @@ namespace cuuhangluuniem2
         {
             string sdate = DateTime.Now.ToString("yyyy-MM-dd");
             lbDailySale.Text = dBConnect.ExtractData("select isnull(sum(total),0) as total from tbCart where status like 'Da Ban' and sdate between '" + sdate + "' and '" + sdate + "'").ToString("#,##0.00");
-            lbTotalProduct.Text = dBConnect.ExtractData("select count(*) from tbProduct1").ToString("#,##0");
+            lbTotalProduct.Text = dBConnect.ExtractData("select sum(qty) from tbInventory").ToString("#,##0");
             lbStockOnHand.Text = dBConnect.ExtractData("select isnull(sum(qty),0) as qty from tbProduct1").ToString("#,##0");
-            lbCritical.Text= dBConnect.ExtractData("select count(*) from vwCriticalItems").ToString("#,##0"); ;
+            lbCritical.Text= dBConnect.ExtractData("select count(*) from vwCriticalItems1 where qty<10").ToString("#,##0"); 
         }
     }
 }

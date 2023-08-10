@@ -53,11 +53,11 @@ namespace cuuhangluuniem2
             cn.Open();
             if(cbCashier.Text=="Tất Cả Nhân Viên")
             {
-                cm=new SqlCommand("select c.id,c.transno,c.pcode,p.pdesc,c.price,c.qty,c.disc,c.total from tbCart as c inner join tbProduct1 as p on c.pcode=p.pcode where status like 'Da Ban' and sdate between '"+dtFrom.Value.ToString("yyyyMMdd")+"' and '"+dtTo.Value.ToString("yyyyMMdd") + "'",cn);
+                cm=new SqlCommand("select c.id,c.transno,c.pcode,p.pdesc,c.price,c.qty,c.disc,c.total from tbCart as c inner join tbProduct1 as p on c.pcode=p.pcode where status like 'Da Ban' and sdate between '"+dtFrom.Value.ToString("yyyy-MM-dd")+"' and '"+dtTo.Value.ToString("yyyy-MM-dd") + "'",cn);
             }
             else
             {
-                cm = new SqlCommand("select c.id,c.transno,c.pcode,p.pdesc,c.price,c.qty,c.disc,c.total from tbCart as c inner join tbProduct1 as p on c.pcode=p.pcode where status like 'Da Ban' and sdate between '" + dtFrom.Value.ToString("yyyyMMdd") + "' and '" + dtTo.Value.ToString("yyyyMMdd") + "' and cashier like '"+cbCashier.Text+"'", cn);
+                cm = new SqlCommand("select c.id,c.transno,c.pcode,p.pdesc,c.price,c.qty,c.disc,c.total from tbCart as c inner join tbProduct1 as p on c.pcode=p.pcode where status like 'Da Ban' and sdate between '" + dtFrom.Value.ToString("yyyy-MM-dd") + "' and '" + dtTo.Value.ToString("yyyy-MM-dd") + "' and cashier like '"+cbCashier.Text+"'", cn);
             }
             dr = cm.ExecuteReader();
             while(dr.Read())

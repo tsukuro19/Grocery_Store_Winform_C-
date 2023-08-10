@@ -25,20 +25,7 @@ namespace cuuhangluuniem2
             cn.Open();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
         #region panelSlide
         private void customize_Design()
         {
@@ -212,6 +199,11 @@ namespace cuuhangluuniem2
         private void btStore_Click(object sender, EventArgs e)
         {
             hide_submenu();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            btDashboard.PerformClick();
         }
     }
 }

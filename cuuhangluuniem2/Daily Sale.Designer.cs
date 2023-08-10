@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DailySale));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvSold = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +47,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtFrom = new System.Windows.Forms.DateTimePicker();
+            this.Cancel = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtTo = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,11 +55,10 @@
             this.cbCashier = new System.Windows.Forms.ComboBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.Cancel = new System.Windows.Forms.DataGridViewImageColumn();
-            this.picClose = new System.Windows.Forms.PictureBox();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvSold)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvSold)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +71,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 70);
             this.panel1.TabIndex = 27;
+            // 
+            // picClose
+            // 
+            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picClose.Image = global::cuuhangluuniem2.Properties.Resources.button_57357751;
+            this.picClose.Location = new System.Drawing.Point(955, 8);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(33, 32);
+            this.picClose.TabIndex = 1;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // label1
             // 
@@ -137,7 +148,7 @@
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.Visible = false;
-            this.Column9.Width = 55;
+            this.Column9.Width = 57;
             // 
             // Column3
             // 
@@ -202,15 +213,14 @@
             this.Column8.Name = "Column8";
             this.Column8.Width = 117;
             // 
-            // dtFrom
+            // Cancel
             // 
-            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFrom.Location = new System.Drawing.Point(137, 565);
-            this.dtFrom.Name = "dtFrom";
-            this.dtFrom.Size = new System.Drawing.Size(127, 28);
-            this.dtFrom.TabIndex = 29;
-            this.dtFrom.Value = new System.DateTime(2023, 7, 27, 18, 16, 0, 0);
-            this.dtFrom.ValueChanged += new System.EventHandler(this.dtFrom_ValueChanged);
+            this.Cancel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Cancel.HeaderText = "";
+            this.Cancel.Image = global::cuuhangluuniem2.Properties.Resources.button_57357753;
+            this.Cancel.MinimumWidth = 6;
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Width = 6;
             // 
             // dtTo
             // 
@@ -267,7 +277,7 @@
             this.dataGridViewImageColumn1.Image = global::cuuhangluuniem2.Properties.Resources.button_57357753;
             this.dataGridViewImageColumn1.MinimumWidth = 6;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 6;
+            this.dataGridViewImageColumn1.Width = 125;
             // 
             // btnPrint
             // 
@@ -281,25 +291,13 @@
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
-            // Cancel
+            // dtFrom
             // 
-            this.Cancel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Cancel.HeaderText = "";
-            this.Cancel.Image = global::cuuhangluuniem2.Properties.Resources.button_57357753;
-            this.Cancel.MinimumWidth = 6;
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Width = 6;
-            // 
-            // picClose
-            // 
-            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picClose.Image = global::cuuhangluuniem2.Properties.Resources.button_57357751;
-            this.picClose.Location = new System.Drawing.Point(955, 8);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(33, 32);
-            this.picClose.TabIndex = 1;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFrom.Location = new System.Drawing.Point(137, 565);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(127, 28);
+            this.dtFrom.TabIndex = 36;
             // 
             // DailySale
             // 
@@ -307,13 +305,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 624);
+            this.Controls.Add(this.dtFrom);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.cbCashier);
             this.Controls.Add(this.lbTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtTo);
-            this.Controls.Add(this.dtFrom);
             this.Controls.Add(this.dtgvSold);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -324,8 +322,8 @@
             this.Text = "Giảm Giá Hàng Ngày";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvSold)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvSold)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,8 +350,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Button btnPrint;
-        public System.Windows.Forms.DateTimePicker dtFrom;
         public System.Windows.Forms.DateTimePicker dtTo;
         public System.Windows.Forms.ComboBox cbCashier;
+        public System.Windows.Forms.DateTimePicker dtFrom;
     }
 }

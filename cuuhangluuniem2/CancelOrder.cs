@@ -30,6 +30,10 @@ namespace cuuhangluuniem2
         {
             try
             {
+                if (txtReason.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập lý do","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }
                 if(cbInventory.Text!=string.Empty && udCancelQty.Value>0 && txtReason.Text != string.Empty) 
                 {
                     if(int.Parse(txtQty.Text)>=udCancelQty.Value)
